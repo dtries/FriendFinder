@@ -1,4 +1,4 @@
-// express npm 
+// Dependenies
 
 var express = require("express");
 var path = require("path");
@@ -17,8 +17,8 @@ app.use(express.json());
 // ----Routes for used with program -----
 // ================================================================================
 
-// require("./routes/apiRoutes")(app);
-require("./routing/htmlRoutes")(app);
+require("./app/routing/apiRoutes.js")(app);
+require("./app/routing/htmlRoutes.js")(app);
 
 // Listener, displays port that server is using
 
