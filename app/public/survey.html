@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Friend Finder</title>
+
+
+  <!-- Reset CSS -->
+  <link rel="stylesheet" href="./assets/css/reset.css">
+
+  <!-- CSS Link Materialize -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Link for Material Design Icons from Google -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body class="amber">
+
+  <div class="container">
+    <div class="row">
+      <br>
+      <div class="col s12">
+        <div class="card purple darken-4">
+          <div class="card-content white-text">
+            <span class="card-title amber-text">
+              <h2><strong>Survey Questions</strong></h2>
+            </span>
+            <hr>
+            <h3 class="tag-line deep-orange-text">About You</h3>
+            <br>
+            <div class="row">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <i class="material-icons prefix amber-text">edit</i>
+                    <input id="name icon-prefix" type="text" class="validate white-text">
+                    <label class="active amber-text" for="name">
+                      <h6><b>Name (Required)</b></h6>
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <i class="material-icons prefix amber-text">face</i>
+                    <input id="user_photo icon-prefix" type="text" class="validate white-text">
+                    <label class="active amber-text" for="User_photo">
+                      <h6><b>Link to Photo Image (Required)</b></h6>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <hr>
+            <h5 class="question-label deep-orange-text"><strong>Question 1</strong></h5>
+            <h6 class="question"><strong>How much do you like going on spontaneous, unplanned adventures?</strong></h6>
+            <br>
+            <select class="browser-default">
+              <option value="" disabled selected>Choose your answer</option>
+              <option value="1">1 (Not at All)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Very Much)</option>
+            </select>
+            <!-- MORE QUESTIONS HERE -->
+            <br>
+            <button class="btn-large waves-effect waves-light amber purple-text text-darken-4" type="submit" name="action"><b>Submit</b>
+              <i class="material-icons right purple-text text-darken-4">send</i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 purple-text text-darken-4">
+          <p><a class="purple-text text-darken-4" href="/api/tables"><strong>API Table Link</a> | <a class="purple-text text-darken-4" href="https://github.com/dtries/FriendFinder">GitHub
+              Repo</strong></a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    $(document).ready(function () {
+      $('select').formSelect();
+
+      $('#textarea1').val('New Text');
+      M.textareaAutoResize($('#textarea1'));
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "A compatibility app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtries/FriendFinder.git"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "api",
+    "html",
+    "javascript"
+  ],
+  "author": "Dennis Ries",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dtries/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/dtries/FriendFinder#readme"
+}
