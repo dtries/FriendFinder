@@ -9,15 +9,15 @@
   <!-- Reset CSS -->
   <link rel="stylesheet" href="./assets/css/reset.css">
 
-    <!-- jquery link -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- jquery link -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
- <!-- Compiled and minified CSS -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
- <!-- Compiled and minified JavaScript -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
   <!-- Link for Material Design Icons from Google -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -44,23 +44,33 @@
             <div class="row">
               <form class="col s12">
                 <div class="row">
-                  <div class="input-field col s12">
-                    <i class="material-icons prefix amber-text">edit</i>
-                    <input id="name icon-prefix" type="text" class="validate white-text">
-                    <label class="active amber-text" for="name">
-                      <h6><b>Name (Required)</b></h6>
-                    </label>
-                  </div>
+                  <form class="col s12">
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <i class="material-icons prefix amber-text">edit</i>
+                        <textarea id="name" class="white-text materialize-textarea"></textarea>
+                        <label class="amber-text" for="name">
+                          <h6><b>Name (Required)</b></h6>
+                        </label>
+                      </div>
+                    </div>
+                  </form>
                 </div>
+
                 <div class="row">
-                  <div class="input-field col s12">
-                    <i class="material-icons prefix amber-text">face</i>
-                    <input id="user_photo icon-prefix" type="text" class="validate white-text">
-                    <label class="active amber-text" for="User_photo">
-                      <h6><b>Link to Photo Image (Required)</b></h6>
-                    </label>
-                  </div>
+                  <form class="col s12">
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <i class="material-icons prefix amber-text">face</i>
+                        <textarea id="user_photo" class="white-text materialize-textarea"></textarea>
+                        <label class="amber-text" for="user_photo">
+                          <h6><b>Link to Photo Image (Required)</b></h6>
+                        </label>
+                      </div>
+                    </div>
+                  </form>
                 </div>
+
               </form>
             </div>
             <hr>
@@ -79,7 +89,7 @@
               </select>
             </div>
             <br>
-<!-- 
+
             <div class="divider"></div>
 
             <h5 class="question-label deep-orange-text"><strong>Question 2</strong></h5>
@@ -208,7 +218,7 @@
             </select>
             <br>
             <div class="divider"></div>
- -->
+
             <br>
             <button class="submission btn-large waves-effect waves-light amber purple-text text-darken-4" type="submit"
               name="action"><b>Submit</b>
@@ -249,10 +259,12 @@
 
   <script>
     $(document).ready(function () {
-      $(".browser-default").formSelect();
+      $("select").formSelect();
 
-      $("#textarea1").val("New Text");
-      M.textareaAutoResize($("#textarea1"));
+      M.updateTextFields();
+
+      // $("#textarea1").val("New Text");
+      // M.textareaAutoResize($("#textarea1"));
 
       $(".modalPanel").modal({
         dismissable: false,

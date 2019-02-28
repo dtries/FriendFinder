@@ -34,7 +34,7 @@ module.exports = function (app) {
       var scoreDiff = 0;
 
       for (var d = 0; d < clientScores.length; d++) {
-        scoreDiff += Math.abs(friendsData[i].score[i] - clientScores[d]); //calculates absoulte diff between each answer for those in the friends array and the current user
+        scoreDiff += Math.abs(friendsData[i].scores[i] - clientScores[d]); //calculates absoulte diff between each answer for those in the friends array and the current user
       }
 
       if (scoreDiff < matchScore) {
@@ -47,7 +47,7 @@ module.exports = function (app) {
     }
 
     //Insert current users survey info into the friends array
-    friends.push(surveyInput);
+    friendsData.push(surveyInput);
 
     // response
     res.json({
