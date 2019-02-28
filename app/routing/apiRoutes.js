@@ -46,6 +46,8 @@ module.exports = function (app) {
 
     }
 
+    // console.log("Compatible Person = " + compatibleName + [i]);
+    // console.log("Compatible Image = " + compatibleImage);
     //Insert current users survey info into the friends array
     friendsData.push(surveyInput);
 
@@ -58,17 +60,4 @@ module.exports = function (app) {
 
   });
 
-  // ---------------------------------------------------------------------------
-  // I added this below code so you could clear out the table while working with the functionality.
-  // Don"t worry about it!
-
-  app.post("/api/clear", function (req, res) {
-    // Empty out the arrays of data
-    tableData.length = [];
-    waitListData.length = [];
-
-    res.json({
-      ok: true
-    });
-  });
 };

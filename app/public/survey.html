@@ -263,10 +263,8 @@
 
       M.updateTextFields();
 
-      // $("#textarea1").val("New Text");
-      // M.textareaAutoResize($("#textarea1"));
 
-      $(".modalPanel").modal({
+      $(".modal").modal({
         dismissable: false,
         opacity: 0.75,
         inDuration: 500, // in ms
@@ -304,7 +302,7 @@
             $("#compatiblePic").attr("src", data.compatibleImage);
 
             // display modal
-            $("#modalUp").modal("open");
+            $("#modalPanel").modal("open");
 
 
           });
