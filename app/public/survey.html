@@ -9,8 +9,15 @@
   <!-- Reset CSS -->
   <link rel="stylesheet" href="./assets/css/reset.css">
 
-  <!-- CSS Link Materialize -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- jquery link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+ <!-- Compiled and minified CSS -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+ <!-- Compiled and minified JavaScript -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
   <!-- Link for Material Design Icons from Google -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -57,25 +64,29 @@
               </form>
             </div>
             <hr>
-            <h5 class="question-label deep-orange-text"><strong>Question 1</strong></h5>
-            <h6 class="question"><strong>How much do you like going on spontaneous, unplanned adventures?</strong></h6>
+
+            <div class="input-field col s12">
+              <h5 class="question-label deep-orange-text"><strong>Question 1</strong></h5>
+              <h6 class="question"><strong>How much do you like going on spontaneous, unplanned adventures?</strong></h6>
+              <br>
+              <select class="browser-default" id="question_1">
+                <option value="" disabled selected>Choose your answer</option>
+                <option value="1">1 (Not at All)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Very Much)</option>
+              </select>
+            </div>
             <br>
-            <select class="browser-default">
-              <option value="" disabled selected>Choose your answer</option>
-              <option value="1">1 (Not at All)</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5 (Very Much)</option>
-            </select>
-            <br>
+<!-- 
             <div class="divider"></div>
 
             <h5 class="question-label deep-orange-text"><strong>Question 2</strong></h5>
             <h6 class="question"><strong>How much would it bother you if you learned your flight will be delayed by 5
                 hours?</strong></h6>
             <br>
-            <select class="browser-default">
+            <select class="browser-default" id="question_2">
               <option value="" disabled selected>Choose your answer</option>
               <option value="1">1 (Not at All)</option>
               <option value="2">2</option>
@@ -89,7 +100,7 @@
             <h5 class="question-label deep-orange-text"><strong>Question 3</strong></h5>
             <h6 class="question"><strong>Your work space is neat as a pin?</strong></h6>
             <br>
-            <select class="browser-default">
+            <select class="browser-default" id="question_3">
               <option value="" disabled selected>Choose your answer</option>
               <option value="1">1 (Not at All)</option>
               <option value="2">2</option>
@@ -103,7 +114,7 @@
             <h5 class="question-label deep-orange-text"><strong>Question 4</strong></h5>
             <h6 class="question"><strong>How often do you change your mind?</strong></h6>
             <br>
-            <select class="browser-default">
+            <select class="browser-default" id="question_4">
               <option value="" disabled selected>Choose your answer</option>
               <option value="1">1 (Never)</option>
               <option value="2">2</option>
@@ -117,7 +128,7 @@
             <h5 class="question-label deep-orange-text"><strong>Question 5</strong></h5>
             <h6 class="question"><strong>Are you bold, sometimes to the point of recklessness?</strong></h6>
             <br>
-            <select class="browser-default">
+            <select class="browser-default" id="question_5">
               <option value="" disabled selected>Choose your answer</option>
               <option value="1">1 (Not at All)</option>
               <option value="2">2</option>
@@ -131,7 +142,7 @@
             <h5 class="question-label deep-orange-text"><strong>Question 6</strong></h5>
             <h6 class="question"><strong>How often do you spend money on fun activities or luxury items?</strong></h6>
             <br>
-            <select class="browser-default">
+            <select class="browser-default" id="question_6">
               <option value="" disabled selected>Choose your answer</option>
               <option value="1">1 (Never)</option>
               <option value="2">2</option>
@@ -145,7 +156,7 @@
             <h5 class="question-label deep-orange-text"><strong>Question 7</strong></h5>
             <h6 class="question"><strong>How often do you like to hang out with your friends?</strong></h6>
             <br>
-            <select class="browser-default">
+            <select class="browser-default" id="question_7">
               <option value="" disabled selected>Choose your answer</option>
               <option value="1">1 (A Few Times Per Month)</option>
               <option value="2">2</option>
@@ -159,7 +170,7 @@
             <h5 class="question-label deep-orange-text"><strong>Question 8</strong></h5>
             <h6 class="question"><strong>Do you love to attend large parties?</strong></h6>
             <br>
-            <select class="browser-default">
+            <select class="browser-default" id="question_8">
               <option value="" disabled selected>Choose your answer</option>
               <option value="1">1 (Not at All)</option>
               <option value="2">2</option>
@@ -173,7 +184,7 @@
             <h5 class="question-label deep-orange-text"><strong>Question 9</strong></h5>
             <h6 class="question"><strong>Would people describe you as super nice?</strong></h6>
             <br>
-            <select class="browser-default">
+            <select class="browser-default" id="question_9">
               <option value="" disabled selected>Choose your answer</option>
               <option value="1">1 (Not at All)</option>
               <option value="2">2</option>
@@ -187,7 +198,7 @@
             <h5 class="question-label deep-orange-text"><strong>Question 10</strong></h5>
             <h6 class="question"><strong>Are you more optimistic than most people?</strong></h6>
             <br>
-            <select class="browser-default">
+            <select class="browser-default" id="question_10">
               <option value="" disabled selected>Choose your answer</option>
               <option value="1">1 (Not at All)</option>
               <option value="2">2</option>
@@ -197,9 +208,10 @@
             </select>
             <br>
             <div class="divider"></div>
-
+ -->
             <br>
-            <button class="btn-large waves-effect waves-light amber purple-text text-darken-4" type="submit" name="action"><b>Submit</b>
+            <button class="submission btn-large waves-effect waves-light amber purple-text text-darken-4" type="submit"
+              name="action"><b>Submit</b>
               <i class="material-icons right purple-text text-darken-4">send</i>
             </button>
           </div>
@@ -221,13 +233,73 @@
     </div>
   </footer>
 
+  <!-- Modal Dialog Displaying Closest Friend Match -->
+  <div id="modalPanel" class="modal">
+    <div class="modal-content">
+      <h4>Your Like-Minded Friend Match</h4>
+      <div class="divider"></div>
+      <h5 id="compatiblePerson"></h5>
+      <img id="compatiblePic" class="materialboxed" width="650" src="">
+    </div>
+    <div class="modal-footer">
+      <a href="/survey" class="modal-action modal-close waves-effect waves-green btn-flat">Fill Again!</a>
+    </div>
+  </div>
+
 
   <script>
     $(document).ready(function () {
-      $('select').formSelect();
+      $(".browser-default").formSelect();
 
-      $('#textarea1').val('New Text');
-      M.textareaAutoResize($('#textarea1'));
+      $("#textarea1").val("New Text");
+      M.textareaAutoResize($("#textarea1"));
+
+      $(".modalPanel").modal({
+        dismissable: false,
+        opacity: 0.75,
+        inDuration: 500, // in ms
+        outDuration: 750, // in ms
+        startingTop: "10%",
+        startingBottom: "20%"
+      });
+
+      // Submit Button Listener
+      $(".submission").on('click', function (event) {
+        event.preventDefault(); //prevents whole page from reloading
+
+        //Survey Form input values, in JSON object form
+        var surveyInput = {
+          name: $("#name").val().trim(),
+          photo: $("#user_photo").val().trim(),
+          scores: [
+            $("#question_1").val().trim(),
+            $("#question_2").val().trim(),
+            $("#question_3").val().trim(),
+            $("#question_4").val().trim(),
+            $("#question_5").val().trim(),
+            $("#question_6").val().trim(),
+            $("#question_7").val().trim(),
+            $("#question_8").val().trim(),
+            $("#question_9").val().trim(),
+            $("#question_10").val().trim()
+          ]
+        };
+
+        // send survey input to friends array
+        $.post("/api/friends", surveyInput)
+          .done(function (data) {
+            $("#compatiblePerson").html(data.compatibleName);
+            $("#compatiblePic").attr("src", data.compatibleImage);
+
+            // display modal
+            $("#modalUp").modal("open");
+
+
+          });
+
+
+      });
+
     });
   </script>
 

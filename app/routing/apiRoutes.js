@@ -5,45 +5,70 @@ var friendsData = require("../data/friends.js");
 
 // Routing informations
 
-module.exports = function(app) {
+module.exports = function (app) {
 
   // --- API GET Requests for friendsArray data JSON ----
 
-  app.get("/api/friends", function(req, res) {
+  app.get("/api/friends", function (req, res) {
     res.json(friendsData);
   });
 
-  // API POST Requests
-  // Below code handles when a user submits a form and thus submits data to the server.
-  // In each of the below cases, when a user submits form data (a JSON object)
-  // ...the JSON is pushed to the appropriate JavaScript array
-  // (ex. User fills out a reservation request... this data is then sent to the server...
-  // Then the server saves the data to the tableData array)
-  // ---------------------------------------------------------------------------
+  // --- API POST Requests ---takes user input, submits JSON to friendsArray ---
+  // --- Calculates closest match and Displays that match -----
 
-  // app.post("/api/friends", function(req, res) {
-  //   // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
-  //   // It will do this by sending out the value "true" have a table
-  //   // req.body is available since we're using the body parsing middleware
-  //   if (tableData.length < 5) {
-  //     tableData.push(req.body);
-  //     res.json(true);
-  //   }
-  //   else {
-  //     waitListData.push(req.body);
-  //     res.json(false);
-  //   }
-  // });
+  app.post("/api/friends", function (req, res) {
+
+    // req.body via the body parsing middleware already included in required npm modules
+    // gathers survey responses from user
+    var surveyInput = req.body;
+
+    var clientScores = surveyInput.scores; //obtains scores for survey answers
+
+    // set up vars for matching process
+    var compatibleName = ""; //empty at start
+    var compatibleImage = ""; //empty at start
+    var matchScore = 1024; //large diff at beginning of match process
+
+    //Loop through all persons in friendsArray and compare scores
+    for (var i = 0; i < friendsData.length; i++) {
+      var scoreDiff = 0;
+
+      for (var d = 0; d < clientScores.length; d++) {
+        scoreDiff += Math.abs(friendsData[i].score[i] - clientScores[d]); //calculates absoulte diff between each answer for those in the friends array and the current user
+      }
+
+      if (scoreDiff < matchScore) {
+        matchScore = scoreDiff; // sets matchScore to scoreDiff only when the current comparison has a lower score than the existed low score
+
+        compatibleName = friendsData[i].name; // sets name to person with lowest absolute diff score
+        compatibleImage = friendsData[i].photo; //set image to person with lowest absoulte diff score
+      }
+
+    }
+
+    //Insert current users survey info into the friends array
+    friends.push(surveyInput);
+
+    // response
+    res.json({
+      status: "OK",
+      compatibleName: compatibleName,
+      compatibleImage: compatibleImage
+    });
+
+  });
 
   // ---------------------------------------------------------------------------
   // I added this below code so you could clear out the table while working with the functionality.
   // Don"t worry about it!
 
-  app.post("/api/clear", function(req, res) {
+  app.post("/api/clear", function (req, res) {
     // Empty out the arrays of data
     tableData.length = [];
     waitListData.length = [];
 
-    res.json({ ok: true });
+    res.json({
+      ok: true
+    });
   });
 };
