@@ -18,15 +18,15 @@ Try the [App](https://warm-cove-96261.herokuapp.com/).
 1. Enter 'npm install' in GitBash or your terminal.
    * This will install the proper js package files from a package JSON file.
    
-## Running on a Local Server
-1. Enter 'node server.js' this will open a local server on your machine. 
-1. Your terminal will display which port the app is using, in this case 8080.
-1. Open up a browser window and type in 'localhost:8080', this will open the homepage for FriendFinder
-   * Possible actions:
-     1. Play Video.       
-     1. Click Button to Take the Survey.
-     1. Click Link for API Table
-     1. Click Link for GitHub Repo
+   ## Running on a Local Server
+   1. Enter 'node server.js' this will open a local server on your machine. 
+   1. Your terminal will display which port the app is using, in this case 8080.
+   1. Open up a browser window and type in 'localhost:8080', this will open the homepage for FriendFinder
+     * Possible actions:
+       1. Play Video.       
+       1. Click Button to Take the Survey.
+       1. Click Link for API Table
+       1. Click Link for GitHub Repo
      
 
           
