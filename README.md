@@ -8,29 +8,27 @@ The assignment was to implement Node JS, Express JS, and Path JS to create and f
 ## Screen Shots
 
 
+
+## Run App Through Heroku Deployement
+Try the [App] (https://warm-cove-96261.herokuapp.com/).
  
 ## Getting Started on Your Own Machine
-1. Clone [repo](https://github.com/dtries/Bamazon) to your machine. 
+1. Clone [repo](https://github.com/dtries/FriendFinder) to your machine. 
+1. Navigate to the FriendFinder directory on your maching using GitBash or your terminal.
 1. Enter 'npm install' in GitBash or your terminal.
    * This will install the proper js package files from a package JSON file.
-1.
    
-## Customer Portal
-1. Enter 'node bamazonCustomer.js'for the customer portal. 
-1. Look over the items for sale in the table produced upon entering the app.
-1. At item purchase prompt enter item to order using the corresponding item number from the table.
-1. Another prompt will appear asking how many of that item you would like to purchase, enter the desired quantity.
-   * Possible results:
-     1. Desired amount of the item requested is less than the stock on hand.
-          * Order processing appears.
-          * Customer is given the total cost.
-          * Thank you message is displayed.
-          * Transaction complete message is displayed.
-          * The inventory in the database is updated by subtracting out the number of an item that was purchased.
-          
-     1. Desired amount of the item requested is greater than the stock on hand. 
-          * Message is displayed indicating that not enough of the desired item is in stock.
-          * The item purchase prompt is displayed again.
+## Running on a Local Server
+1. Enter 'node server.js' this will open a local server on your machine. 
+1. Your terminal will display which port the app is using, in this case 8080.
+1. Open up a browser window and type in 'localhost:8080', this will open the homepage for FriendFinder
+   * Possible actions:
+     1. Play Video.       
+     1. Click Button to Take the Survey.
+     1. Click Link for API Table
+     1. Click Link for GitHub Repo
+     
+
           
 
 ## Tech Employed
