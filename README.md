@@ -10,7 +10,7 @@ The assignment was to implement Node JS, Express JS, and Path JS to create and f
 
 
 ## Run App Through Heroku Deployement
-Try the [App] (https://warm-cove-96261.herokuapp.com/).
+Try the [App](https://warm-cove-96261.herokuapp.com/).
  
 ## Getting Started on Your Own Machine
 1. Clone [repo](https://github.com/dtries/FriendFinder) to your machine. 
