@@ -5,10 +5,6 @@ A Compatibility Application
 
 The assignment was to implement Node JS, Express JS, and Path JS to create and friend finder compatibility application employing servers to run the app as a website. The home screen introduces the user to the site, includes a fun friend related video, and a link to the compatibility survey. The survey itself asks for the users first name and a link to a photo, followed by 10 questions answered using a select menu to gather user responses. The app compares the answers to each question to those of each other person in the data base. The person in the database with a score most similar to the user is selected as the most compatible. The first name of the most compatiable person along with that persons image are displayed for the user in a modal. The user can select to take the survey again from within the modal. Links are also provided at the bottom of each page which are routed to the JSON api of the friends database and to this github repo, respectively.
 
-## Screen Shots
-
-
-
 ## Run App Through Heroku Deployement
 Try the [App](https://warm-cove-96261.herokuapp.com/).
  
@@ -26,10 +22,7 @@ Try the [App](https://warm-cove-96261.herokuapp.com/).
        1. Play Video.       
        1. Click Button to Take the Survey.
        1. Click Link for API Table
-       1. Click Link for GitHub Repo
-     
-
-          
+       1. Click Link for GitHub Repo         
 
 ## Tech Employed
 * Node.js - (see below)
