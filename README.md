@@ -7,7 +7,7 @@ The assignment was to implement Node JS, Express JS, and Path JS to create and f
 
 <div align="left">
     <img src="/app/images/FriendFinderHome.png" width="300px"</img> 
-    <img src="/app/images/Survey.png" width="400px"</img> 
+    <img src="/app/images/Survey.png" width="400px" align="right"</img> 
 </div>
 <br>
 
